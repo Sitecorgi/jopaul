@@ -1,0 +1,11 @@
+node_modules
+Design
+.vscode
+.vs
+
+bin
+obj
+Jo/wwwroot/css
+Jo/wwwroot/img
+
+*.user
