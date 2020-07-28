@@ -1,5 +1,29 @@
 ﻿@import "variables";
 
 .site-header {
-    background: rgba(204, 204, 204, 0.8);
+    background: rgba(225, 225, 225, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .headings {
+        max-width: $site-width;
+        h1 {
+            margin: 10px 10px 0 10px;
+            line-height: 0.8;
+        }
+        p {
+            margin: 0 0 10px 10px;
+            color: $grey-md;
+            font-weight:bold;
+        }
+    }
+
+    .menu-wrap {
+        display:flex;
+        flex-direction:row;
+        .menu {
+            margin-left:auto;
+        }
+    }
 }

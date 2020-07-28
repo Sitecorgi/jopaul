@@ -1,9 +1,41 @@
 ﻿@import "variables";
 
 body {
-    background: url("../../img/wallpaper_200.png");
+    background: url("../../img/wallpaper_400.png");
 }
 
 .container.main {
     background-color: $grey-light;
+    max-width: $site-width;
+
+    .content {
+        padding: 50px 100px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "DM Serif Display", "sans-serif";
+    color: $grey-dark;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+    color: $green-dark;
+    margin: 10px 0 60px 0;
+}
+
+p, span, li {
+    font-family: 'Montserrat', 'sans-serif';
+    color: $grey-dark;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+img.banner {
+    max-width: $site-width;
+    max-height: 500px;
 }

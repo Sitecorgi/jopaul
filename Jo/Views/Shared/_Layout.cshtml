@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Serif+Display" />
     <link rel="stylesheet" href="~/css/style.min.css">
 
     <title>@ViewBag.Title</title>
@@ -18,27 +19,31 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
+        <div class="container headings">
             <div class="row">
-                <h1>Dr Joanne Paul</h1>
-                <h2>RENAISSANCE HISTORIAN</h2>
-                <partial name="Partial/_Menu.cshtml" />
+                <div class="col">
+                    <h1>Dr Joanne Paul</h1>
+                    <div class="menu-wrap">
+                        <p>RENAISSANCE HISTORIAN</p>
+                        <partial name="Partial/_Menu.cshtml" />
+                    </div>
+                </div>      
             </div>
         </div>
     </header>
 
-        @RenderBody()
+    @RenderBody()
 
 
-    <footer class="footer text-muted">
-        <div class="container">
+    <footer class="site-footer container">
+        <div>
             @{
                 var currentSite = await WebApp.Site.GetContentAsync<JoSite>();
             }
             @if (currentSite != null)
             {
-                <div class="row">
-                    <div class="col-12">
+                <div>
+                    <div>
                         @Html.Raw(currentSite.FooterContents.CopyrightText)
                     </div>
                 </div>
